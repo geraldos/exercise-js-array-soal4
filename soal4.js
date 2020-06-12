@@ -1,15 +1,15 @@
 let silabus1 = ['Math', 'English', 'Programming']
 let silabus2 = ['Geography', 'Spanish', 'Programming']
 
+compare = (arr1, arr2) => {
+  let result = false
 
-const compare = () => {
-    for (let i = 0; i <= silabus1.length; i++) {
-        if (silabus1[i] === silabus2[i]) {
-            console.log(true)
-        } else {
-            console.log(false)
-        }
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr2.includes(arr1[i])) {
+      result = true
     }
+  }
+  return result
 }
 
-compare()
+console.log(compare(silabus1, silabus2))
